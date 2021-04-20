@@ -1,0 +1,98 @@
+<%- include ('../partials/header.ejs') %>
+
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:  #2f3032;">
+                <div class="container-fluid ">
+                <img src="/static/images/download.png" class="img-thumbnail" alt="..." width="50" height="50">
+                <a class="navbar-brand" href="#">&nbsp;  Streamline Streaming</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item" >
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Top Picks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    </ul>
+                    <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                </div>
+            </nav>
+            </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="main-display" >
+            <div class="row ">
+                <div class="col-5 left">
+                    <div class="left_image">    
+                        <img src="/static/images/Capture.PNG" class="img-fluid">
+                    </div>
+                    <div class="div1">
+                        <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+                            Aldus PageMaker including versions of Lorem Ipsum.</a>
+                    </div>
+                </div>
+
+                <div class="col-7 right">
+                    <div class="login_box">
+                        <form>
+                            <fieldset>
+                                <h1 class="display-4">Log In</h1>
+                                <label>Username</label>
+                                <input type="text" class="form-control">
+                                <label>Password</label>
+                                <input type="password" class="form-control">
+                                <br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                    </label>
+                                <br><br>
+                                <div >
+                                    <button class="button login_button">Login</button>
+                                
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <br>
+        </div>
+    </div>
+
+<%- include ('../partials/footer.ejs') %>

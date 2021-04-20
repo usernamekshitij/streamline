@@ -1,0 +1,72 @@
+<%- include ('../partials/header.ejs') %>
+
+<body>
+    <div class="top">
+        <div id="overlay">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background: transparent;">
+
+            <a class="navbar-brand" href="#">
+                <img src="/static/images/logo.png" width="30" height="30" alt="" style="margin:0 10px 0 10px">
+                Streamline Streaming
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav" id="navi">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Top Picks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+
+                <button class="btn btn-outline-light">Login</button>
+            </ul>
+            </div>
+        </nav>
+        <div class="top-content">
+            <h1 class="display-4">A good movie is always hard <br>to find</h1>
+            <span>But, we can help you with that</span><br>
+            <button class="btn btn-outline-light">Signup</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Second section -->
+    <div class="mid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="/static/images/mid-image-1.png">
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1 class="display-5 ">Browse over hundreds of movies from various platforms.</h1><br>
+                <span>Netflix, Prime, Hulu and much more </span>
+            </div>
+        </div>
+    </div>
+
+    <div style="background:rgb(83, 82, 82);height:1px;"></div>
+
+     <!-- third section -->
+     <div class="bottom">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1 class="display-5">Your taste is always our top priority.</h1><br>
+                <span>Get movie recommendations on the go.</span>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="/static/images/bottom-image.jpg">
+            </div>
+        </div>
+    </div>
+
+        
+
+<%- include ('../partials/footer.ejs') %>
