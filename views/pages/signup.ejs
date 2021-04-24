@@ -20,46 +20,51 @@
                     <h1>Happy to have you onboard :)</h1>
                     <span>With our recommendation system your taste will always be our priorites.</span>
                 </div>
+
                 <form>
-                    <input class="form-control" type="text" name="firstname" placeholder="Name">
+                    <input class="form-control" type="text" name="name" minlength="3" onkeydown = validate_name() onkeyup=validate_name() placeholder="Name" required>
+                    <div class="alert alert-danger" id="error_name"></div>
+
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">@</span>
                         </div>
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                     </div>
         
-                    <input class="form-control" type="number" name="age" placeholder="Age">
-                    
+                   
+                    <input class="form-control" type="number" min="0" max="100" name="age" onkeydown = validate_age() onkeyup=validate_age() placeholder="Age" required>
+                    <div class="alert alert-danger" id="error_age"></div>
+
                     <label for="gender">Gender:</label>
-                    <select class="form-select">
+                    <select class="form-select" name="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
         
-                    <label for="Country">Country:</label>
+                    <label for="Country" name='country'>Country:</label>
                     <select class="form-select">
                         <option value="India">India</option>
                         <option value="USA">USA</option>
                         <option value="Italy">Italy</option>
                     </select>
 
+                    
                     <label for="password">Password:</label>
                     <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
+                        <input type="password" class="form-control" minlength="8" name="password" onkeydown = validate_password() onkeyup=validate_password() placeholder="Password">
+                        <div class="input-group-append">
+                            <span class="input-group-text material-icons" id="basic-addon1">lock</span>
                         </div>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
+                    <div class="alert alert-danger" id="error_pass"></div>
 
-                    <button class="btn btn-outline-light">Signup</button>
+                    <button class="btn btn-outline-light" type="submit">Signup</button>
                 </form>        
             </div>
         </div>
-
     </div> 
 
-</body>
-
+<script src="/static/js/validation-signup.js"></script>
 <%- include("../partials/footer.ejs") %>

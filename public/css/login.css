@@ -18,6 +18,7 @@ body{
     width: 90%;
     padding:2%;
     margin-bottom:5%;
+    color:white;
     background: rgba(51, 50, 50, 0.7);
     border-color:rgba(255,255,255,0.5);
 }
@@ -40,6 +41,13 @@ body{
     
     opacity:0.5;
     transition:0.25s linear;
+}
+
+#error_pass,#error_username{
+    width:90%;
+    margin-top:-4%;
+    padding:2%;
+    display: none;
 }
 
 @media (max-width:999px){
