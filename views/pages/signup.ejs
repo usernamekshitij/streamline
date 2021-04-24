@@ -1,0 +1,65 @@
+<%- include("../partials/header.ejs") %>
+    <link rel="stylesheet" href="/static/css/registration.css">
+</head>
+
+<body>
+    <%- include("../partials/nav.ejs") %>
+    <div class="signup-box">
+        <div class="row box">
+            <div class="col-lg-7 col-md-12 col-sm-12 left-pane">
+                <div class="overlay">
+                    <div class="left-pane-content">
+                        <h1 class="display-4">Join us and be a part of our community.</h1>
+                        <span>Browse over hundreds of choices of movies all around the world.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <div class="right-pane-content">
+                    <h1>Happy to have you onboard :)</h1>
+                    <span>With our recommendation system your taste will always be our priorites.</span>
+                </div>
+                <form>
+                    <input class="form-control" type="text" name="firstname" placeholder="Name">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+        
+                    <input class="form-control" type="number" name="age" placeholder="Age">
+                    
+                    <label for="gender">Gender:</label>
+                    <select class="form-select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+        
+                    <label for="Country">Country:</label>
+                    <select class="form-select">
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Italy">Italy</option>
+                    </select>
+
+                    <label for="password">Password:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+
+                    <button class="btn btn-outline-light">Signup</button>
+                </form>        
+            </div>
+        </div>
+
+    </div> 
+
+</body>
+
+<%- include("../partials/footer.ejs") %>

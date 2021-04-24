@@ -1,0 +1,22 @@
+<%- include ('../partials/header.ejs') %>
+<link rel="stylesheet" href="/static/css/login.css">
+
+</head>
+<body>
+    <%- include("../partials/nav.ejs") %>
+    <div class="login-box shadow-lg rounded">
+        <h1>Let's Sign you in.</h1>
+        <h3 style="opacity: 0.5;">Welcome back. You have been missed!</h3>
+        <form>
+            <input class="form-control" type="text" placeholder="Username">
+            <input class="form-control" type="password" placeholder="Password">
+            <!-- <center> -->
+                <button class="btn btn-outline-light">Sign In</button><br>
+                <span><span style="opacity: 0.5;">Don't have an account?</span>&nbsp;&nbsp;<a class="text-white" href="/index/signup">Register</a></span>
+            <!-- </center> -->
+        </form>
+    </div>
+
+</body>
+
+<%- include("../partials/footer.ejs") %>
