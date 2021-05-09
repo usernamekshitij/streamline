@@ -21,7 +21,7 @@
                     <span>With our recommendation system your taste will always be our priorites.</span>
                 </div>
 
-                <form>
+                <form action = '/index/signup' method = "POST" >
                     <input class="form-control" type="text" name="name" minlength="3" onkeydown = validate_name() onkeyup=validate_name() placeholder="Name" required>
                     <div class="alert alert-danger" id="error_name"></div>
 
@@ -43,8 +43,16 @@
                         <option value="other">Other</option>
                     </select>
         
+                    <label for="occupation">Occupation:</label>
+                    <select class="form-select" name="occupation">
+                        <option> Select an occupation </option>
+                        <% for(var i=0; i < occupations.length; i++) { %>
+                              <option value = <%= occupations[i] %>><%= occupations[i] %></option>
+                         <% } %>
+                    </select>
+
                     <label for="Country" name='country'>Country:</label>
-                    <select class="form-select">
+                    <select class="form-select" name="country">
                         <option value="India">India</option>
                         <option value="USA">USA</option>
                         <option value="Italy">Italy</option>
@@ -59,7 +67,6 @@
                         </div>
                     </div>
                     <div class="alert alert-danger" id="error_pass"></div>
-
                     <button class="btn btn-outline-light" type="submit">Signup</button>
                 </form>        
             </div>

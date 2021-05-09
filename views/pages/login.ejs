@@ -7,7 +7,7 @@
     <div class="login-box shadow-lg rounded">
         <h1>Let's Sign you in.</h1>
         <h3 style="opacity: 0.5;">Welcome back. You have been missed!</h3>
-        <form>
+        <form action = "/index/signin" method = "POST">
             <input class="form-control" name="username" minlength="1" onblur=validate_username() type="text" placeholder="Username" required>
             <div class="alert alert-danger" id="error_username"></div>
 
