@@ -21,7 +21,7 @@
                     <span>With our recommendation system your taste will always be our priorites.</span>
                 </div>
 
-                <form action = "/index/signup" method="POST">
+                <form>
                     <input class="form-control" type="text" name="name" minlength="3" onkeydown = validate_name() onkeyup=validate_name() placeholder="Name" required>
                     <div class="alert alert-danger" id="error_name"></div>
 
@@ -60,10 +60,9 @@
                     </div>
                     <div class="alert alert-danger" id="error_pass"></div>
 
-                    <button class="btn btn-outline-light" type="submit">Signup</button><br>
-                    <span><span style="opacity: 0.5;">Already a member?</span>&nbsp;&nbsp;<a class="text-white" href="/index/signin">Login</a></span>        
-                </form>
-                     </div>
+                    <button class="btn btn-outline-light" type="submit">Signup</button>
+                </form>        
+            </div>
         </div>
     </div> 
 
