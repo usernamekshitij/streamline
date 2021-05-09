@@ -65,6 +65,13 @@ form label{
     margin-bottom:1%;
 }
 
+form a{
+    text-decoration: none;
+}
+form a:hover{
+    opacity: 0.5;
+    transition:0.25s linear;
+}
 div.input-group{
     margin:0px;
 }
@@ -75,6 +82,7 @@ div.input-group{
 
 form > button{
     margin-top:5%;
+    margin-bottom:5%;
     padding:5% ;
     width:100%;
 }
