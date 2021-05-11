@@ -53,7 +53,7 @@ Router.post('/signup',(req,res)=>{
     //passing the json obj to the python code
     let argu_data = JSON.stringify(req.body)
     const py = spawnSync('echo', [argu_data, "| python automated/add_user.py"],{shell:true});
-    
+
     //storing the data in datastring
     dataString = py.stdout.toString()
     final_data = JSON.parse(dataString)
@@ -69,6 +69,11 @@ Router.post('/signup',(req,res)=>{
 
 Router.get("/home",auth,(req,res)=>{
     res.render("pages/mainpage",{user:req.session.user_data})
+    // res.render('pages/mainpage')
 })
 
+// Router.get("/createOccupations",(req,res)=>{
+//     let occu = new OccupationModel({"occupations":['administrator', 'artist', 'doctor', 'educator', 'engineer', 'entertainment', 'executive', 'healthcare', 'homemaker', 'lawyer', 'librarian', 'marketing', 'none', 'other', 'programmer', 'retired', 'salesman', 'scientist', 'student', 'technician', 'writer']})
+//     occu.save();
+// })
 module.exports = Router

@@ -1,6 +1,54 @@
 <%- include ('../partials/header.ejs') %>
+<link rel="stylesheet" href="/static/css/mainpage.css">
 </head>
 
 <body>
-    <h1>Welcome here <%=user.name %></h1>
-</body>
+    <%- include("../partials/nav.ejs") %>
+
+    <div class="container">
+        <div class='row'>
+            <h1>Popular movies</h1>
+            <% for(let i=0; i < user['by_popularity'].length;i++){ %>
+                <div class="col-3">
+                    
+                    <div class="card" style="width: 18rem; height: 30rem">
+                        <img class="card-img-top" height="400" width=50 src="<%= user['by_popularity'][i]['link'] %>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= user['by_popularity'][i]['name'] %></h5>
+                            <p class='card-text'>
+                                Genres:
+                                <% user['by_popularity'][i]['genre'].forEach((genre)=>{ %>
+                                    <%= genre %>
+                                <% }) %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+            <h1>Top rated movies</h1>
+            <% for(let i=0; i < user['by_rating'].length;i++){ %>
+                <div class="col-3">
+                    
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<%= user['by_rating'][i]['link'] %>" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title"><%= user['by_rating'][i]['name'] %></h5>
+                        <p class='card-text'>
+                            Genres:
+                            <% user['by_rating'][i]['genre'].forEach((genre)=>{ %>
+                                <%= genre %>
+                            <% }) %>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            <% } %>
+
+            <!-- // <div class="col-12">
+            //     <h1>Highly rated movies</h1>
+            // </div> -->
+        </div>
+    </div>
+
+<%- include("../partials/footer.ejs") %>
